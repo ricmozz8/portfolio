@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ricmozz - desarrollador y diseñador</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="shortcut icon" href="/rz_white.svg" type="image/x-icon" />
+    <script src="/js/viewTransition.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-black antialiased text-slate-100 scroll-smooth">
+    <div
+        id="navbar"
+      class="hidden z-300 w-full flex items-center p-3 bg-black border-b border-gray-800 text-center justify-center sticky top-0 mx-auto"
+    >
+      <a class="cursor-pointer" onclick="scrollToSection('home')">
+        <img src="rz_white.svg" class="w-8 h-8" alt="" />
+      </a>
+    </div>
+
+    <div
+      id="home"
+      class="flex flex-col items-center justify-center h-screen text-center p-8 gap-5 max-w-3xl mx-auto"
+    >
+      <img src="rz_white.svg" alt="ricmozz" class="w-16 h-16" />
+
+      <h1 class="md:text-8xl text-5xl tracking-tight font-thin">
+        Desarrollador y diseñador gráfico.
+      </h1>
+
+      <p>
+        Me apasiona la creación de interfaces y experiencias digitales, desde el
+        prototipo hasta la implementación.
+      </p>
+
+      <div class="flex gap-3 items-center">
+        <a
+          onclick="scrollToSection('projects')"
+          class="bg-slate-100 flex gap-1 items-center p-3 rounded-full text-black cursor-pointer hover:bg-gray-300 hover:px-6 transition-all ease-in-out duration-500"
+        >
+          Proyectos
+        </a>
+        <a
+          target="_blank"
+          href="https://www.github.com/ricmozz8"
+          class="hover:text-slate-200 transition-colors flex items-center gap-1"
+        >
+          <i class="lab la-github"></i>
+          @ricmozz8
+        </a>
+      </div>
+      <div class="animate-bounce my-3">
+        <i class="las la-arrow-down"></i>
+      </div>
+    </div>
+
+    <div
+      id="projects"
+      class="flex flex-col items-center justify-center text-center gap-10"
+    >
+      <h1 class="text-5xl tracking-tight font-normal">
+        Proyectos más recientes
+      </h1>
+
+      <div class="flex flex-col gap-2 w-full">
+        <a href="/projects/classydog.html" class="hover:text-slate-200 my-12">
+          <img
+            class=" w-full 2xl:rounded-md h-full object-cover hover:brightness-90 transition-all"
+            src="/img/cd/branding-presentation.png"
+            alt=""
+          />
+        </a>
+        <a href="/projects/vetcamp.html" class="hover:text-slate-200 my-12">
+          <img
+            class=" w-full 2xl:rounded-md h-full object-cover hover:brightness-90 transition-all"
+            src="/img/vc/vt-camp-pres.png"
+            alt=""
+          />
+        </a>
+      </div>
+    </div>
+
+    <div class="h-screen flex flex-col items-center justify-center gap-12  text-center mx-auto">
+        <h1 class="text-6xl font-medium tracking-tight">
+            ¿Quieres saber más?
+        </h1>
+        <p>Puedes ponerte en contacto conmigo a través de mi  <a class=" rounded-full  cursor-pointer underline transition-colors" href="mailto:rlmc255@gmail.com">correo electrónico<i class="las la-external-link-alt"></i> </a></p>
+    </div>
+
+    <footer class="p-4 border-t border-gray-800 mt-3">
+      <div class="mx-12">
+        <img src="rz_white.svg" class="w-8 h-8" alt="" />
+
+        <div class="flex flex-col">
+            <a href="https://www.github.com/ricmozz8">@ricmozz8</a>
+        
+        </div>
+      </div>
+      
+    </footer>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const navbar = document.getElementById('navbar');
+
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (scrollTop > 300) {
+        navbar.classList.remove('hidden');
+        navbar.style.transition = 'opacity 0.5s ease-in-out';
+        navbar.style.opacity = 1;
+      } else {
+        navbar.classList.add('hidden');
+        navbar.style.opacity = 0;
+      }
+    });
+  });
+</script>
+
+  </body>
+</html>
