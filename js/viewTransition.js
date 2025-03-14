@@ -8,7 +8,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('a[href]').forEach(a => {
     a.addEventListener('click', e => {
-      if (a.getAttribute('href') !== '#' && a.getAttribute('href') !== window.location.href) {
+      if (a.getAttribute('href') !== '#' && a.getAttribute('href') !== window.location.href && !a.getAttribute('href').startsWith('http')) {
         e.preventDefault();
         document.body.style.transition = 'opacity 0.5s ease';
         document.body.style.opacity = 0;
