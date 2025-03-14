@@ -11,7 +11,7 @@ html{
 body{
     font-family: 'Archivo', sans-serif;
     animation: appear .5s ease-in-out;
-    max-width: 1400px;
+    max-width: 1600px;
     margin: auto;
 
 }
